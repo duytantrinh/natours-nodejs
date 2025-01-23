@@ -11,7 +11,7 @@ const login = async (email, password) => {
       },
     });
 
-    console.log(res);
+    // console.log(res);
 
     // nếu log in thành công sẽ tự refresh về trang homepage sau 1.5s
     if (res.data.status === 'success') {
