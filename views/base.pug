@@ -1,0 +1,29 @@
+//- khai báo đầu html, giống nhau với mọi template
+doctype html
+html 
+    head 
+        block head
+           
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            link(rel='stylesheet' href='/css/style.css')
+            link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+            link(rel='stylesheet'    href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+            title Natours | #{title}
+
+    body
+        // convert file overview.html sang .pug
+        //- HEADER
+        include _header
+
+        // dynamic data: connect by 'block content' 
+        block content 
+            h1 This is a heading
+
+        //- FOOTER
+        include _footer
+
+        script(src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js') 
+        script(src='/js/auth.js')
+        script(src='https://js.stripe.com/v3/')
+        script(src='/js/stripe.js')
+        script(src='/js/index.js')
